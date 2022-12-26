@@ -1,0 +1,358 @@
+\documentclass [xcolor=svgnames, t] {beamer} 
+\usepackage[utf8]{inputenc}
+
+\usepackage[english,russian]{babel}
+
+\usepackage[font=footnotesize]{caption}
+\usepackage{mathtools}
+\usepackage{wrapfig}
+\usepackage{setspace} 
+\usepackage{geometry}
+\usepackage{enumerate}
+\usepackage{titlepic}
+\usetheme{Ilmenau}
+\definecolor{mycolor}{RGB}{86, 6, 109}
+\usecolortheme[named=mycolor]{structure}
+\usetheme{Berlin}
+\usepackage{lipsum}
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\title[Electrocaloric effect
+]{Electrocaloric effect
+}
+
+\author[Ilya Medvedev \& Ivan Golyshev  \& Victor Krayushkin]{
+	Ilya Medvedev \& Ivan Golyshev Б04-101 \\
+ \& Victor Krayushkin Б04-108 }
+ 
+
+
+\institute[MIPT]{ \\
+Moscow Institute of Physics \& Technology}
+\date{30 of dec 2022}
+
+\begin{document}
+\definecolor{mycolor1}{RGB}{253, 219, 19}
+\setbeamercolor{background canvas}{bg=mycolor1!7}
+
+\begin{frame}
+\maketitle
+\end{frame}
+\section{Goals}
+\begin{frame}
+\frametitle{Introduction \& purposes
+}
+
+\begin{enumerate} 
+ \vspace{1.2cm}
+    \item Build a theoretical description of electrocaloric effect.
+\vspace{0.2cm}
+    \item Set an experiment to measure dependance temperature difference on starting temperature and electric field induction.
+\vspace{0.2cm}
+    \item Analyse the quantitative results
+\end{enumerate}
+        
+\end{frame}
+
+\section{Annotation}
+\begin{frame}{Annotation}
+\vspace{1.2cm}
+The paper investigates the electrocaloric properties of the monocrystal $BaTiO_3$. The electrocaloric effect is considered. A theoretical description of the effect is built and an experiment is made to measure the dependence of the temperature difference on the initial temperature and the intensity of the external electrostatic field.
+\end{frame}
+
+\begin{frame}{What does the electrocaloric effect means?}
+\begin{block}{theoretical background}
+If the change in the polarization of the dielectric is produced quasi-statically and adiabatically, then it is, generally speaking, accompanied by a change in the temperature of the dielectric. This phenomenon is called the electrocaloric effect.
+
+\end{block}
+\center{\includegraphics[height = 3.0cm]{перестраивания под действием поля.jpeg}}
+\end{frame}
+
+\begin{frame}{What does the electrocaloric effect means?
+}
+In the absence of external electric field, ferroelectrics have a domain structure like this:
+\center{\includegraphics[height = 4.5cm]{2.jpeg}}
+\end{frame}
+
+\begin{frame}{What does the electrocaloric effect means?
+}
+An external electric field changes the directions of electric domain moments, which creates the effect of strong polarization.
+
+\center{\includegraphics[height = 4.4cm]{3.png}}
+  
+\end{frame}
+\begin{frame}{Why ferroelectrics have domain structure?
+}
+\begin{enumerate}
+\vspace{1.8cm}
+    \item Crystallographic equiprobability of the occurrence of spontaneous polarization in any of the allowed directions
+\item Energetic case. 
+\end{enumerate}
+\end{frame}
+\section{Theory}
+\begin{frame}{Thermodynamics of dielectrics}
+\begin{block}{}
+\begin{equation}
+ \delta A^{out} + \delta Q = dU
+ \end{equation}
+ \begin{equation}
+\delta A^{out} = PdV + dW = PdV + \frac{1}{4\pi}EdD
+\end{equation}
+\end{block}  
+Let’s approach that volume is not seriously change during our measurements.
+Also approaching that process is quasi-static.\\ Finally got:
+
+\begin{block}{}
+\begin{equation}
+   \delta Q = dU - \frac{1}{4\pi}EdD
+   \end{equation}
+\end{block}
+\end{frame}
+\begin{frame}{Thermodynamics of dielectrics
+}
+\vspace{0.8cm}
+\begin{block}{Let the process be quasi-static, then:
+}
+\begin{equation}
+\delta Q = TdS \longrightarrow dU = TdS + \frac{1}{4\pi}EdD
+\end{equation}
+\end{block}{} 
+\vspace{0.2cm}
+So, one of the basic equations of thermodynamics of dielectrics has been obtained, which will be used further.  
+\end{frame}{}
+
+\begin{frame}{Electrocaloric effect}
+If the change in the polarization of the dielectric is made quasistatically and adiabatically, it is generally accompanied by a change in the temperature of the dielectric. This phenomenon is called an electrocaloric effect. \\
+
+In this process, entropy remains constant. Let's consider entropy as a function of E and T. Let's write down the last obtained equation for an infinitely small process:
+\begin{block}
+
+\begin{equation}
+(\frac{\partial S}{\partial T})_E \Delta T + (\frac{\partial S}{\partial E})_T \Delta E = 0
+\end{equation}
+\end{block}
+\end{frame}
+\begin{frame}{}
+\vspace{0.4cm}
+\begin{block}{Obviously, that}
+\begin{equation}
+(\frac{\partial S}{\partial T})_E = \frac{1}{T}(\frac{T \partial S}{\partial T})_E = \frac{1}{T} (\frac{\delta Q}{\delta T})_E = \frac{C_E}{T}
+\end{equation}
+\begin{equation}
+(\frac{\partial S}{\partial E})_T = \frac{1}{4\pi}(\frac{\partial D}{\partial T})_E = \frac{E}{4\pi} \frac{\partial \varepsilon}{\partial T}
+\end{equation}
+\end{block}
+\vspace{0.4cm}
+\begin{block}{From the last equation:}
+\begin{equation}
+   \Delta T = -\frac{TE}{4\pi C_E} \frac{\partial \varepsilon}{\partial T} \Delta E
+   \end{equation}
+\end{block}{}
+\end{frame}{}
+
+ \begin{frame}{}
+     \begin{block}{Let’s find C:}
+     \begin{equation}
+     C_E = T(\frac{\partial S}{\partial T})_E = -T(\frac{\partial^2 \Phi}{\partial T^2})_E
+     \end{equation}
+     \end{block}{}
+    \begin{block}{Similar to the equation for internal energy, you can get:}
+    \begin{equation}
+\Phi = \Psi - \frac{1}{4\pi}ED = \Psi_0 - \frac{\varepsilon E^2}{8\pi}
+\end{equation}
+\end{block}
+\begin{block}{Where from:}
+\begin{equation}
+    C_E = C_V + \frac{TE^2}{8\pi} \frac{d^2 \varepsilon}{dT^2}
+    \end{equation}
+ \end{block}   
+ \vspace{0.2cm}
+ So, got final equations of our theory.  
+\end{frame}{}
+\section{Experiment}
+\begin{frame}{About experimental details}
+    \begin{enumerate}
+        \item We work with BaTiO3 because: cheap, easy to buy legal, low Dielectric Curie Point (DCP) \(\approx\) 120С
+\item Why we need to look in DCP? 
+    \end{enumerate}
+\center{\includegraphics[height = 4.2cm]{4.jpeg}}
+\end{frame}
+\begin{frame}{Experimental setup
+}
+\center{\includegraphics[height = 5.2cm]{8.jpeg}}
+\end{frame}
+\begin{frame}{}
+\center{\includegraphics[height = 6.4cm]{10.jpeg}}
+\end{frame}
+
+\begin{frame}{Experiment plan \& expectations
+}
+\vspace{1,2 cm}
+   \begin{enumerate}
+       \item Calibrate HVG
+\item Measure simple cooling of \(BaTiO_{3}\) – expect an exponential depandance
+\item Measure C(T) \(\Rightarrow \varepsilon\)(T) – expect complicated depandance like:
+\item Build a theory figure of effect
+   \end{enumerate} 
+\end{frame}
+
+\begin{frame}{}
+\center{\includegraphics[height = 6.6cm]{4.jpeg}}
+\end{frame}
+
+\section{Expections}
+\begin{frame}{Effect expectations}
+\begin{block}
+    
+\begin{equation}
+    \Delta T = -\frac{TE}{4\pi C_E} \frac{\partial \varepsilon}{\partial T} \Delta E
+\end{equation}
+\end{block}
+\vspace{0.3 cm}
+if $T > T_C $ we expect $\Delta T < 0$\\
+if $T < T_C $ we expect $\Delta T > 0$\\
+\vspace{0.3 cm}
+Then, taking advantage of our approximations, we get:
+\begin{block}{}
+\begin{equation}
+    \Delta T \approx 1 K
+\end{equation}
+\end{block}
+\end{frame}
+
+\begin{frame}{Calibration of HVG
+}
+\center{\includegraphics[height = 5.6cm]{IMG_8667.jpg}}    
+\end{frame}
+\begin{frame}{Cooling measurements
+}
+\center{\includegraphics[height = 5.6cm]{6.png}}
+\end{frame}
+\begin{frame}{Measure C(T) and build ε(T) dependence
+}
+\center{\includegraphics[height = 5.6cm]{7.jpeg}}
+\end{frame}
+\begin{frame}{Approximate peak by gaussian
+}
+\center{\includegraphics[height = 5.6cm]{8 2.jpeg}}
+\end{frame}
+\begin{frame}{Approximate peak by gaussian
+}
+\center{\includegraphics[height = 5.6cm]{IMG_5529.jpg}}
+\end{frame}
+
+\begin{frame}{Build the theoretical figure for E = 2 MV/m
+}
+\begin{block}{}
+ \begin{equation}
+     C_{E} = C_{V}+\frac{TE^{2}}{8\pi} \frac{d^{2}\varepsilon }{d T^{2}}
+ \end{equation}  
+ \end{block}
+ Estimate Cv with Einstein’s formula:
+ \begin{block}{}
+\begin{equation}
+   C_{V}=\left(\frac{dU}{dt}\right)_{V} = 3R\left(\frac{\theta}{T}\right)^{2} \frac{exp\left(\frac{\theta}{T}\right)}{\left(exp\left(\frac{\theta}{T}\right)-1\right)^{2}}
+\end{equation}
+\end{block}
+\begin{block}{}
+\begin{equation}
+    \theta = \frac{\overline{h}\omega}{k}\sim 10^{3} K \Rightarrow \Delta T = -\frac{TE}{4\pi C_E} \frac{\partial \varepsilon}{\partial T} \Delta E
+\end{equation}
+\end{block}
+\end{frame}
+\begin{frame}{Build the theoretical figure for E = 2 MV/m
+}
+    \center{\includegraphics[height = 5.6cm]{9.png}}
+\end{frame}
+\section{Results processing}
+\begin{frame}{Measure an effect and take an experimental point
+}
+    \center{\includegraphics[height = 5.6cm]{18.png}}
+\end{frame}
+
+\begin{frame}{Take the final figure
+}
+     \center{\includegraphics[height = 5.6cm]{Ð¡Ð½Ð¸Ð¼Ð¾Ðº 26.12.2022 Ð²Â 16.03.jpg}}
+\end{frame}
+
+\begin{frame}{About results – errors
+}
+\vspace{1,2 cm}
+\begin{block}{We have observed this experiment with average error approximately 0.5K because:}
+ \begin{enumerate}
+     \item Fitting peak ε(T) errors
+\item Thermocouple disturbance like 0.2K
+\item Exponent fit of effect cooling
+\item We have HVG’s calibration errors
+
+ \end{enumerate}  
+ \end{block}
+\end{frame}
+\section{Errors}
+\begin{frame}{About results – errors
+}
+ \center{\includegraphics[height = 4.4cm]{22.png}}    
+\end{frame}
+
+\section{Difficulties}
+\begin{frame}{Difficulties}
+    \begin{block}{About experimental difficulties and their solutions
+}
+        \begin{enumerate}
+            \item Adiabatic skin
+\item Need a high field induction – we \item assembled a high voltage generator.
+\itemNeed to prevent thermocouple signal disturbance
+\item Not a single-crystal structure of BaTiO3
+\item In-touch contact of thermocouple and one of plates
+\item Field breakdown
+\item Complicated differential equations of system’s heat loss 
+
+        \end{enumerate}
+    \end{block}
+\end{frame}
+
+ \begin{frame}{Summarize}
+\vspace{1,2 cm}
+\begin{enumerate}
+    \item
+We built the rude theoretic description of electrocaloric effect
+\begin{block}{}
+    
+\begin{equation}
+    \Delta T = -\frac{TE}{4\pi C_E} \frac{\partial \varepsilon}{\partial T} \Delta E
+\end{equation}
+\end{block}
+
+\item We observed this effect
+\item We can say that our theory fits our experimental results pretty well
+\end{enumerate}
+\end{frame}
+ \begin{frame}{Summarize}
+   \center{\includegraphics[height = 5.6cm]{Ð¡Ð½Ð¸Ð¼Ð¾Ðº 26.12.2022 Ð²Â 16.03.jpg}}  
+ \end{frame}
+ 
+ \section{List Of References}
+ \begin{frame}{}
+     
+
+\begin{enumerate}
+    \item Сивухин. Электричество и магнетизм
+    \item https://en.wikipedia.org/wiki/Electrocaloric\_effect
+    \item https://onlinelibrary.wiley.com/\\doi/epdf/10.1002/047134608X.W8244
+    \item http://kapitza.ras.ru/arhiv/people/\\povarov/aseminar/2013-02-Panov.pdf
+    \item https://extxe.com/14277/\\jelektrokaloricheskie-materialy/
+    \item http://solidstate.karelia.ru/d/manuals/n21.pdf
+    \item https://www.sciencedirect.com/science/\\article/pii/S2542435119301618
+    \item https://ochv.ru/magazin/product/titanat-bariya-batio3
+    \end{enumerate}
+    \end{frame}
+
+
+
+\end{document}
